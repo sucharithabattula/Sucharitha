@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Velvet Scoop Ice Cream</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #fff7f2;
+    color: #333;
+}
+
+/* ---------- NAVBAR ---------- */
+header {
+    background: white;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+}
+
+header h1 {
+    color: #ff4d6d;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ff4d6d;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 50px;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero-text h2 {
+    font-size: 42px;
+    color: #ff4d6d;
+}
+
+.hero-text p {
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.hero-text button {
+    padding: 14px 30px;
+    background: #ff4d6d;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.hero img {
+    width: 380px;
+    border-radius: 20px;
+}
+
+/* ---------- SECTION TITLE ---------- */
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    color: #ff4d6d;
+    margin: 60px 0 30px;
+}
+
+/* ---------- CARDS ---------- */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 30px;
+    padding: 0 50px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card h3 {
+    margin: 15px 0;
+    color: #ff4d6d;
+}
+
+/* ---------- ABOUT ---------- */
+.about {
+    background: #ffe3ea;
+    padding: 60px 50px;
+    margin-top: 60px;
+    text-align: center;
+}
+
+/* ---------- CONTACT ---------- */
+.contact {
+    padding: 60px 50px;
+    text-align: center;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    background: #ff4d6d;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 50px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width:768px){
+    header {
+        flex-direction: column;
+    }
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Velvet Scoop</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Flavors</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-text">
+        <h2>Happiness in Every Scoop 🍨</h2>
+        <p>Fresh, creamy ice creams made with love and natural ingredients.</p>
+        <button onclick="orderNow()">Order Now</button>
+    </div>
+
+    <!-- REPLACED HERO IMAGE -->
+    <img src="https://curlytales.com/wp-content/uploads/2021/10/ice-2.png" alt="Ice cream hero">
+</section>
+
+<h2 class="section-title">Popular Flavors</h2>
+
+<div class="cards">
+
+    <!-- CHOCOLATE -->
+<div class="card">
+    <img src="https://www.shutterstock.com/image-photo/advertising-testimonial-photo-highly-detailed-600nw-2627811097.jpg" alt="Chocolate Ice Cream">
+    <h3>Chocolate Bliss</h3>
+    <p>Rich cocoa flavor everyone loves.</p>
+</div>
+
+    <!-- STRAWBERRY -->
+    <div class="card">
+        <img src="https://floridastrawberry.org/wp-content/uploads/2015/03/Florida-Strawberry-Ice-Cream-Recipe-with-Basil-Mint.jpg">
+        <h3>Strawberry Dream</h3>
+        <p>Fresh strawberry creamy goodness.</p>
+    </div>
+
+    <!-- VANILLA -->
+    <div class="card">
+        <img src="https://sharkninja-sfcc-prod-res.cloudinary.com/image/upload/b_rgb:FFFFFF,c_pad,dpr_2.0,f_auto,g_north,h_400,q_auto,w_400/c_pad,h_400,w_400/v1/recipes/Basic-Vanilla-Ice-Cream?pgw=1&_i=AG">
+        <h3>Vanilla Classic</h3>
+        <p>Timeless vanilla taste.</p>
+    </div>
+
+</div>
+
+<section class="about">
+    <h2 class="section-title">About Us</h2>
+    <p>Velvet Scoop  delivers premium ice cream crafted with natural ingredients.</p>
+</section>
+
+<section class="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <input type="text" placeholder="Your Name"><br><br>
+    <input type="email" placeholder="Your Email"><br><br>
+    <textarea rows="4" placeholder="Your Message"></textarea><br><br>
+    <button onclick="sendMessage()">Send Message</button>
+</section>
+
+<footer>
+    <p>© 2025 Velvet Scoop | Made with ❤️</p>
+</footer>
+
+<script>
+function orderNow() {
+    alert("🍨 Thank you for choosing Velvet Scoop!");
+}
+
+function sendMessage() {
+    alert("📩 Message sent successfully!");
+}
+</script>
+
+</body>
+</html>
