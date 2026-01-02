@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Velvet Scoop Ice Cream</title>
+<title>Velvet Scoop Ice Cream</title>
 
 <style>
 * {
@@ -76,6 +76,18 @@ nav a:hover {
     border-radius: 30px;
     font-size: 16px;
     cursor: pointer;
+}
+
+/* ---------- FLOAT EFFECT ---------- */
+.hero img,
+.card img {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero img:hover,
+.card img:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 20px 35px rgba(0,0,0,0.25);
 }
 
 .hero img {
@@ -167,7 +179,6 @@ footer {
     </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero">
     <div class="hero-text">
         <h2>Happiness in Every Scoop 🍨</h2>
@@ -175,49 +186,30 @@ footer {
         <button onclick="orderNow()">Order Now</button>
     </div>
 
-    <!-- REPLACED HERO IMAGE -->
-    <img src="https://curlytales.com/wp-content/uploads/2021/10/ice-2.png" alt="Ice cream hero">
+    <img src="https://curlytales.com/wp-content/uploads/2021/10/ice-2.png">
 </section>
 
 <h2 class="section-title">Popular Flavors</h2>
 
 <div class="cards">
+    <div class="card">
+        <img src="https://www.shutterstock.com/image-photo/advertising-testimonial-photo-highly-detailed-600nw-2627811097.jpg">
+        <h3>Chocolate Bliss</h3>
+        <p>Rich cocoa flavor everyone loves.</p>
+    </div>
 
-    <!-- CHOCOLATE -->
-<div class="card">
-    <img src="https://www.shutterstock.com/image-photo/advertising-testimonial-photo-highly-detailed-600nw-2627811097.jpg" alt="Chocolate Ice Cream">
-    <h3>Chocolate Bliss</h3>
-    <p>Rich cocoa flavor everyone loves.</p>
-</div>
-
-    <!-- STRAWBERRY -->
     <div class="card">
         <img src="https://floridastrawberry.org/wp-content/uploads/2015/03/Florida-Strawberry-Ice-Cream-Recipe-with-Basil-Mint.jpg">
         <h3>Strawberry Dream</h3>
         <p>Fresh strawberry creamy goodness.</p>
     </div>
 
-    <!-- VANILLA -->
     <div class="card">
         <img src="https://sharkninja-sfcc-prod-res.cloudinary.com/image/upload/b_rgb:FFFFFF,c_pad,dpr_2.0,f_auto,g_north,h_400,q_auto,w_400/c_pad,h_400,w_400/v1/recipes/Basic-Vanilla-Ice-Cream?pgw=1&_i=AG">
         <h3>Vanilla Classic</h3>
         <p>Timeless vanilla taste.</p>
     </div>
-
 </div>
-
-<section class="about">
-    <h2 class="section-title">About Us</h2>
-    <p>Velvet Scoop  delivers premium ice cream crafted with natural ingredients.</p>
-</section>
-
-<section class="contact">
-    <h2 class="section-title">Contact Us</h2>
-    <input type="text" placeholder="Your Name"><br><br>
-    <input type="email" placeholder="Your Email"><br><br>
-    <textarea rows="4" placeholder="Your Message"></textarea><br><br>
-    <button onclick="sendMessage()">Send Message</button>
-</section>
 
 <footer>
     <p>© 2025 Velvet Scoop | Made with ❤️</p>
@@ -226,10 +218,6 @@ footer {
 <script>
 function orderNow() {
     alert("🍨 Thank you for choosing Velvet Scoop!");
-}
-
-function sendMessage() {
-    alert("📩 Message sent successfully!");
 }
 </script>
 
